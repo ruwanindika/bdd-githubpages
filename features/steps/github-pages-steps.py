@@ -17,3 +17,15 @@ def verifyImage(context):
 @then(u'close browser')
 def closeBrowser(context):
     context.driver.close()
+
+@given(u'launch firefox browser')
+def step_impl(context):
+    context.driver = webdriver.Firefox()
+
+@given(u'launch edge browser')
+def step_impl(context):
+    context.driver = webdriver.Edge()
+
+@given(u'launch safari browser')
+def step_impl(context):
+    context.driver = webdriver.Safari()
